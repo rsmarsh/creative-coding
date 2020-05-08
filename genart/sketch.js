@@ -1,4 +1,5 @@
 const canvasSketch = require('canvas-sketch');
+const { lerp } = require('canvas-sketch-util/math');
 
 const settings = {
   dimensions: [2048, 2048]
