@@ -23,14 +23,16 @@ const sketch = () => {
   };
 
   const points = createGrid();
+  const margin = 300;
 
   return ({ context, width, height }) => {
     context.fillStyle = 'white';
     context.fillRect(0,0, width, height);
     
     points.forEach(([u, v]) => {
-      const x = u * width;
-      const y = v * height;
+      console.log(u);
+      const x = lerp(margin, width - margin, u);
+      const y = lerp(margin, height - margin, v);
 
       context.beginPath();
       context.arc(x, y, 100, 0, Math.PI*2, false);
