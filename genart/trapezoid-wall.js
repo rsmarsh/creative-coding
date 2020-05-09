@@ -10,7 +10,7 @@ const settings = {
 const sketch = () => {
 
   const colorCount = random.rangeFloor(2, 6);
-  const palette = random.shuffle(random.pick(palettes)).slice(0, colorCount)
+  const palette = random.shuffle(random.pick(palettes))
 
   const createGrid = () => {
     const points = [];
@@ -84,6 +84,7 @@ const sketch = () => {
           
         // stroke with a background colour
         context.strokeStyle = "orange";
+        context.lineWidth = 20;
         context.fillStyle = point1.color;
         context.fill();
 
